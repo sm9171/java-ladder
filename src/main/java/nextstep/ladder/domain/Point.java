@@ -12,6 +12,14 @@ public class Point {
 		this.current = current;
 	}
 
+	public static Point first(final boolean current) {
+		return new Point(false, current);
+	}
+
+	public static Point last(final boolean left) {
+		return new Point(left, false);
+	}
+
 	public Direction move() {
 		if (current) {
 			return Direction.RIGHT;
